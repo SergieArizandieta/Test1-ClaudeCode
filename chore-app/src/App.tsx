@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Box, CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import { format } from 'date-fns';
-import { useLocalStorage } from './hooks/useLocalStorage';
+import { useChoreSync } from './hooks/useChoreSync';
 import type { Chore, TeamMember } from './types';
 import AppHeader from './components/AppHeader';
 import CalendarView from './components/CalendarView';
@@ -16,8 +16,7 @@ const theme = createTheme({
 });
 
 export default function App() {
-  const [members, setMembers] = useLocalStorage<TeamMember[]>('chore-app:members', []);
-  const [chores, setChores] = useLocalStorage<Chore[]>('chore-app:chores', []);
+  const { chores, members, setChores, setMembers } = useChoreSync();
 
   const [viewDate, setViewDate] = useState(new Date());
   const [choreDialogOpen, setChoreDialogOpen] = useState(false);
