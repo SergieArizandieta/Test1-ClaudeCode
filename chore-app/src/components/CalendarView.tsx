@@ -8,7 +8,7 @@ import {
   format,
   isSameMonth,
 } from 'date-fns';
-import { Chore, TeamMember } from '../types';
+import type { Chore, TeamMember } from '../types';
 import { getChoresForMonth } from '../utils/choreOccurrences';
 import CalendarDayCell from './CalendarDayCell';
 

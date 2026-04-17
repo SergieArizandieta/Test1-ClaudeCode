@@ -7,7 +7,7 @@ import {
 } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import AddIcon from '@mui/icons-material/Add';
-import { TeamMember, Chore } from '../types';
+import type { TeamMember, Chore } from '../types';
 import { MEMBER_COLORS, getNextColor } from '../utils/colors';
 
 interface Props {

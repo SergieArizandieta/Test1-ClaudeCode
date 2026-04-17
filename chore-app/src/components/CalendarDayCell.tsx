@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import { isToday } from 'date-fns';
-import { Chore, TeamMember } from '../types';
+import type { Chore, TeamMember } from '../types';
 import ChoreChip from './ChoreChip';
 
 interface Props {

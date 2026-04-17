@@ -6,7 +6,7 @@ import {
 } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { format, parseISO } from 'date-fns';
-import { Chore, TeamMember, Recurrence, RecurrenceType } from '../types';
+import type { Chore, TeamMember, Recurrence, RecurrenceType } from '../types';
 
 const DAY_NAMES = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 

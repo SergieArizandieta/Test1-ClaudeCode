@@ -7,7 +7,7 @@ import {
   isEqual,
   format,
 } from 'date-fns';
-import { Chore } from '../types';
+import type { Chore } from '../types';
 
 // Returns a map of "YYYY-MM-DD" -> Chore[] for the given month
 export function getChoresForMonth(

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Box, CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import { format } from 'date-fns';
 import { useLocalStorage } from './hooks/useLocalStorage';
-import { Chore, TeamMember } from './types';
+import type { Chore, TeamMember } from './types';
 import AppHeader from './components/AppHeader';
 import CalendarView from './components/CalendarView';
 import ChoreFormDialog from './components/ChoreFormDialog';

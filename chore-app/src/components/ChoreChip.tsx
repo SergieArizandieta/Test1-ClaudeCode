@@ -1,5 +1,5 @@
 import { Chip } from '@mui/material';
-import { Chore, TeamMember } from '../types';
+import type { Chore, TeamMember } from '../types';
 
 interface Props {
   chore: Chore;
