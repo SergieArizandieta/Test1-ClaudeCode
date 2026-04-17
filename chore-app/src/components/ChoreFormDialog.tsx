@@ -112,7 +112,13 @@ export default function ChoreFormDialog({ open, chore, defaultDate, members, onS
             <Select
               label="Recurrence"
               value={form.recurrence.type}
-              onChange={(e) => setRecurrence({ type: e.target.value as RecurrenceType, dayOfWeek: undefined, dayOfMonth: undefined })}
+              onChange={(e) => {
+                const type = e.target.value as RecurrenceType;
+                const patch: Partial<Recurrence> = { type, dayOfWeek: undefined, dayOfMonth: undefined };
+                if (type === 'weekly') patch.dayOfWeek = parseISO(form.startDate).getDay();
+                if (type === 'monthly') patch.dayOfMonth = parseISO(form.startDate).getDate();
+                setRecurrence(patch);
+              }}
             >
               <MenuItem value="none">None (one-time)</MenuItem>
               <MenuItem value="daily">Daily</MenuItem>
